@@ -1,0 +1,87 @@
+<div class="ui raised segment">
+  <h2 class="ui header">User Details of {{currentUser.firstName}}</h2>
+  <form #f="ngForm"
+        (ngSubmit)="onSubmit(f.value)"
+        class="ui form">
+    <div class="field right" align="right"><img name="imageUrl" [src]="currentUser.imageUrl" #ngModel class="right"/></div>
+    <div class="field">
+      <label for="firstName">First Name</label>
+      <input type="text"
+             id="firstName"
+             placeholder="first name"
+             name="firstName" [(ngModel)]="currentUser.firstName" #firstName="ngModel">
+      <!--<div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>-->
+      <!--<div *ngIf="sku.hasError('required')" class="ui error message">SKU is required</div>-->
+    </div>
+    <div class="field">
+      <label for="lastName">Last Name</label>
+      <input type="text"
+             id="lastName"
+             placeholder="last name"
+             name="lastName" [(ngModel)]="currentUser.lastName" #lastName="ngModel">
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="text"
+             id="email"
+             placeholder="email"
+             name="email" [(ngModel)]="currentUser.email" #email="ngModel">
+    </div>
+
+    <div class="field">
+      <label for="user.zipCode">Zip</label>
+      <input type="text"
+             id="zipCode"
+             placeholder="zip code"
+             name="zipCode" ngModel>
+    </div>
+    <div class="field">
+      <label for="user.address">Address Type</label>
+      <ul class="ui horizontal list">
+        <li class="item">
+          <input type="checkbox">Home Office
+        </li>
+        <li class="item">
+          <input type="checkbox">Office
+        </li>
+        <li class="item">
+          <input type="checkbox">Mailing Address
+        </li>
+        <li class="item">
+          <input type="checkbox">Store
+        </li>
+      </ul>
+    </div>
+    <div class="field">
+      <label for="user.address">Address</label>
+      <input type="text"
+             id="address"
+             placeholder="address"
+             name="address" ngModel>
+    </div>
+    <div class="field">
+      <label for="user.address">City</label>
+      <input type="text"
+             id="address"
+             placeholder="address"
+             name="address" ngModel>
+    </div>
+    <div class="field">
+      <label for="user.address">State</label>
+      <input type="text"
+             id="address"
+             placeholder="address"
+             name="address" ngModel>
+    </div>
+    <div class="field">
+      <label for="user.address">Country</label>
+      <input type="text"
+             id="address"
+             placeholder="address"
+             name="address" ngModel>
+    </div>
+    <div class="row">
+      <button type="submit" class="ui button">Save</button>
+    </div>
+  </form>
+</div>

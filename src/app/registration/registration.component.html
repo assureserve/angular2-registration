@@ -1,0 +1,69 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Signup</h2>
+  <form #f="ngForm"
+        (ngSubmit)="f.form.valid && register()"
+        class="ui form" novalidate>
+    <!--<div class="field" [ngClass]="{ 'has-error': f.submitted && !firstName.valid }">-->
+      <!--<label for="firstName">First Name</label>-->
+      <!--<input type="text"-->
+             <!--id="firstName"-->
+             <!--placeholder="first name" [(ngModel)]="model.firstName" #firstName="ngModel"-->
+             <!--name="firstName" required>-->
+      <!--<div *ngIf="f.submitted && !firstName.valid" class="help-block">First name is required</div>-->
+      <!--&lt;!&ndash;<div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;<div *ngIf="sku.hasError('required')" class="ui error message">SKU is required</div>&ndash;&gt;-->
+    <!--</div>-->
+    <div class="two fields">
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input placeholder="First Name" type="text" id="firstName"
+               placeholder="first name" [(ngModel)]="model.firstName" #firstName="ngModel"
+               name="firstName" required>
+        <div *ngIf="f.submitted && !firstName.valid" class="help-block">First name is required</div>
+      </div>
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input placeholder="Last Name" type="text" id="lastName"
+               placeholder="last name" [(ngModel)]="model.lastName" #lastName="ngModel"
+               name="lastName" required>
+        <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last name is required</div>
+      </div>
+    </div>
+    <!--<div class="field">-->
+      <!--<label for="lastName">Last Name</label>-->
+      <!--<input type="text"-->
+             <!--id="lastName"-->
+             <!--placeholder="last name" [(ngModel)]="model.lastName" #lastName="ngModel"-->
+             <!--name="lastName" required>-->
+    <!--</div>-->
+    <!--<div class="field">-->
+      <!--<label for="zipCode">Zip</label>-->
+      <!--<input type="text"-->
+             <!--id="zipCode"-->
+             <!--placeholder="zip code" [(ngModel)]="model.zipCode" #zipCode="ngModel"-->
+             <!--name="zipCode" ngModel>-->
+    <!--</div>-->
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="text"
+             id="email"
+             placeholder="email" [(ngModel)]="model.email" #email="ngModel"
+             name="email" ngModel required>
+      <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password"
+             id="password"
+             placeholder="password" [(ngModel)]="model.password" #password="ngModel"
+             name="password" ngModel required>
+      <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+    </div>
+    <div class="row">
+    <button>Register</button>
+      <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+      <a [routerLink]="['/login']" class="link">Cancel</a>
+      <div><br/></div>
+    </div>
+  </form>
+</div>

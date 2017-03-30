@@ -1,0 +1,31 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Login</h2>
+  <form #f="ngForm"
+        (ngSubmit)="f.form.valid && login()"
+        class="ui form" novalidate>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="text"
+             id="email"
+             placeholder="email id" [(ngModel)]="model.email" #userName="ngModel"
+             name="email" required>
+      <div *ngIf="f.submitted && !userName.valid" class="help-block">Email is required</div>
+      <!--<div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>-->
+      <!--<div *ngIf="sku.hasError('required')" class="ui error message">SKU is required</div>-->
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password"
+             id="password"
+             placeholder="password" [(ngModel)]="model.password" #password="ngModel"
+             name="password" required>
+    </div>
+    <div class="row">
+      <button>Login</button>
+      <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+      <a [routerLink]="['/register']" class="link">Register</a>
+      <div><br/></div>
+      <div id="my-signin2"></div>
+    </div>
+  </form>
+</div>
