@@ -4,39 +4,38 @@
         (ngSubmit)="onSubmit(f.value)"
         class="ui form">
     <div class="field right" align="right"><img name="imageUrl" [src]="currentUser.imageUrl" #ngModel class="right"/></div>
-    <div class="field">
-      <label for="firstName">First Name</label>
-      <input type="text"
-             id="firstName"
-             placeholder="first name"
-             name="firstName" [(ngModel)]="currentUser.firstName" #firstName="ngModel">
-      <!--<div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>-->
-      <!--<div *ngIf="sku.hasError('required')" class="ui error message">SKU is required</div>-->
+    
+    <div class="two fields">
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input type="text"
+               id="firstName"
+               placeholder="first name"
+               name="firstName" [(ngModel)]="currentUser.firstName" #firstName="ngModel">
+        <!--<div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>-->
+        <!--<div *ngIf="sku.hasError('required')" class="ui error message">SKU is required</div>-->
+      </div>
+    
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input type="text"
+               id="lastName"
+               placeholder="last name"
+               name="lastName" [(ngModel)]="currentUser.lastName" #lastName="ngModel">
+      </div>
     </div>
     <div class="field">
-      <label for="lastName">Last Name</label>
-      <input type="text"
-             id="lastName"
-             placeholder="last name"
-             name="lastName" [(ngModel)]="currentUser.lastName" #lastName="ngModel">
+        <label for="email">Email</label>
+        <input type="text"
+               id="email"
+               placeholder="email"
+               name="email" [(ngModel)]="currentUser.email" #email="ngModel">
     </div>
-    <div class="field">
-      <label for="email">Email</label>
-      <input type="text"
-             id="email"
-             placeholder="email"
-             name="email" [(ngModel)]="currentUser.email" #email="ngModel">
-    </div>
+    
 
+    
     <div class="field">
-      <label for="user.zipCode">Zip</label>
-      <input type="text"
-             id="zipCode"
-             placeholder="zip code"
-             name="zipCode" ngModel>
-    </div>
-    <div class="field">
-      <label for="user.address">Address Type</label>
+      <label for="user.addressType">Address Type</label>
       <ul class="ui horizontal list">
         <li class="item">
           <input type="checkbox">Home Office
@@ -59,28 +58,129 @@
              placeholder="address"
              name="address" ngModel>
     </div>
-    <div class="field">
-      <label for="user.address">City</label>
-      <input type="text"
-             id="address"
-             placeholder="address"
-             name="address" ngModel>
+    <div class="two fields">
+      <div class="field">
+        <label for="user.suite">Suite / Apartment</label>
+        <input type="text"
+               id="suite"
+               placeholder="suite / apartment"
+               name="suite" ngModel>
+      </div>
+      <div class="field">
+        <label for="user.building">Building #</label>
+        <input type="text"
+               id="building"
+               placeholder="building"
+               name="building" ngModel>
+      </div>
+    </div>
+    <div class="three fields">
+      <div class="field">
+        <label for="user.city">City</label>
+        <input type="text"
+               id="city"
+               placeholder="city"
+               name="city" ngModel>
+      </div>
+      <div class="field">
+        <label for="user.state">State</label>
+        <input type="text"
+               id="state"
+               placeholder="state"
+               name="state" ngModel>
+      </div>
+      <div class="field">
+        <label for="user.zipCode">Zip / Postal Code</label>
+        <input type="text"
+               id="zipCode"
+               placeholder="zip / postal code"
+               name="zipCode" ngModel>
+      </div>
     </div>
     <div class="field">
-      <label for="user.address">State</label>
+      <label for="user.country">Country</label>
       <input type="text"
-             id="address"
-             placeholder="address"
-             name="address" ngModel>
+             id="country"
+             placeholder="country"
+             name="country" ngModel>
     </div>
-    <div class="field">
-      <label for="user.address">Country</label>
-      <input type="text"
-             id="address"
-             placeholder="address"
-             name="address" ngModel>
+    <h4 class="ui top attached header" style="background-color: #D3D3D3">Contact Information</h4>
+    <div class="ui attached segment">
+      
+      <div class="three fields">
+        <div class="field">
+          <label for="user.phone">Phone</label>
+          <input type="text"
+                 id="phone"
+                 placeholder="phone"
+                 name="phone" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.mobile">Mobile</label>
+          <input type="text"
+                 id="mobile"
+                 placeholder="mobile"
+                 name="mobile" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.fax">Fax</label>
+          <input type="text"
+                 id="fax"
+                 placeholder="fax"
+                 name="fax" ngModel>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="field">
+          <label for="user.email">Email</label>
+          <input type="text"
+                 id="email2"
+                 placeholder="email"
+                 name="email2" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.website">Website</label>
+          <input type="text"
+                 id="website"
+                 placeholder="website"
+                 name="mobwebsiteile" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.facebook">Facebook</label>
+          <input type="text"
+                 id="facebook"
+                 placeholder="facebook"
+                 name="facebook" ngModel>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="field">
+          <label for="user.linkedin">Linkedin</label>
+          <input type="text"
+                 id="linkedin"
+                 placeholder="linkedin"
+                 name="linkedin" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.google">Google+</label>
+          <input type="text"
+                 id="google"
+                 placeholder="google"
+                 name="google" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.twitter">Twitter</label>
+          <input type="text"
+                 id="twitter"
+                 placeholder="twitter"
+                 name="twitter" ngModel>
+        </div>
+      </div>
     </div>
-    <div class="row">
+    <br/>
+    <div class="row" align="right">
       <button type="submit" class="ui button">Save</button>
     </div>
   </form>

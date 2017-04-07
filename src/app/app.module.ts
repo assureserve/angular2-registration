@@ -18,6 +18,7 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 import {AlertService} from "./services/alert.service";
 import { AlertComponent } from './alert/alert.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AlertComponent } from './alert/alert.component';
     RegistrationComponent,
     UserDetailsComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

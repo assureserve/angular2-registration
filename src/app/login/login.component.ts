@@ -22,11 +22,11 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    //alert(1);
     this.authenticationService.login(this.model.email, this.model.password)
                               .subscribe((data) => {
                                                     console.log(JSON.stringify(data));
                                                     localStorage.setItem('currentUser', JSON.stringify(data));
+                                                    this.authenticationService.navBarLink.emit("Logout");
                                                     this.router.navigate(['/details']);
                                                   });
     //
