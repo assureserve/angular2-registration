@@ -51,8 +51,11 @@ export class AuthenticationService {
       let options = new RequestOptions({ headers: headers });
       let body = JSON.stringify({email: userName, password: password});
 
-      return this.http.post('http://localhost:8080/login', body, { headers: this.getPostHeaders() })
-      .map(res => res.json());
+//      return this.http.post('http://localhost:8080/login', body, { headers: this.getPostHeaders() })
+//     .map(res => res.json());
+
+        return this.http.get('http://localhost:8080/profiles/userid/palledp', {headers: this.getPostHeaders()})
+                .map(res => res.json());
 
 
       //return true;
