@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "./../models/user.model";
+import {UtilService} from "../services/util.service";
 
 @Component({
   selector: 'app-user-details',
@@ -9,11 +10,33 @@ import {User} from "./../models/user.model";
 export class UserDetailsComponent implements OnInit {
   currentUser: User;
   user: User;
+  address: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  country: string;
 
-  constructor() {
+  constructor(private utilService: UtilService) {
     console.log(localStorage.getItem('currentUser'));
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     console.log(this.currentUser);
+    this.address = this.currentUser.addressList[0].street1 + " " + this.currentUser.addressList[0].street2;
+    this.city = this.currentUser.addressList[0].city;
+    this.state = this.currentUser.addressList[0].state;
+    this.country = this.currentUser.addressList[0].country;
+    this.zipCode = this.currentUser.addressList[0].zipCode;
+
+    //this.address = this.currentUser.addressList[0].street1 + " " + 
+    this.utilService.addressEmitter.subscribe((addressMap: Map<string, string>) => {
+      this.address = addressMap.get("address");
+      this.city = addressMap.get("city");
+      this.state = addressMap.get("state");
+      this.zipCode = addressMap.get("zipCode");
+      this.country = addressMap.get("country");
+      //this.userLink.nativeElement.innerHTML = link;
+    });
+
+    
   }
 
   ngOnInit() {

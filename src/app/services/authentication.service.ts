@@ -11,6 +11,7 @@ export class AuthenticationService {
   private baseUrl: string = 'http://localhost:8080/hello';
   userLoggedIn : boolean = false;
   public navBarLink: EventEmitter<string> = new EventEmitter();
+  public addressEmitter: EventEmitter<Map<string, string>> = new EventEmitter();
 
   constructor(private http: Http) { }
 
@@ -54,7 +55,7 @@ export class AuthenticationService {
 //      return this.http.post('http://localhost:8080/login', body, { headers: this.getPostHeaders() })
 //     .map(res => res.json());
 
-        return this.http.get('http://localhost:8080/profiles/userid/palledp', {headers: this.getPostHeaders()})
+        return this.http.get('http://crmps-heroku.herokuapp.com/profiles/userid/palledp', {headers: this.getPostHeaders()})
                 .map(res => res.json());
 
 

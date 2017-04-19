@@ -1,3 +1,7 @@
+//import {Address} from "./address.model";
+import {Address} from "./address.model";
+import {Contact} from "./contact.model";
+
 export class User {
   companyName: string;
   firstName: string;
@@ -10,4 +14,8 @@ export class User {
   imageUrl: string;
   token: string;
   password: string;
+  //address: Address;
+
+  addressList: Address[] = [];
+  contactList: Contact[] = [];
 }
