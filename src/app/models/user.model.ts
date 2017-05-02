@@ -16,6 +16,6 @@ export class User {
   password: string;
   //address: Address;
 
-  addressList: Address[] = [];
+  addresses: Address[] = [];
   contactList: Contact[] = [];
 }

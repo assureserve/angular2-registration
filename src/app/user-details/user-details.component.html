@@ -4,7 +4,7 @@
         (ngSubmit)="onSubmit(f.value)"
         class="ui form">
     <div class="field right" align="right"><img name="imageUrl" [src]="currentUser.imageUrl" #ngModel class="right"/></div>
-    
+
     <div class="two fields">
       <div class="field">
         <label for="firstName">First Name</label>
@@ -15,7 +15,7 @@
         <!--<div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>-->
         <!--<div *ngIf="sku.hasError('required')" class="ui error message">SKU is required</div>-->
       </div>
-    
+
       <div class="field">
         <label for="lastName">Last Name</label>
         <input type="text"
@@ -29,11 +29,11 @@
         <input type="text"
                id="email"
                placeholder="email"
-               name="email" [(ngModel)]="currentUser.contactList[0].value" #email="ngModel">
+               name="email" [(ngModel)]="currentUser.contacts[0].value" #email="ngModel">
     </div>
-    
 
-    
+
+
     <div class="field">
       <label for="user.addressType">Address Type</label>
       <ul class="ui horizontal list">
@@ -105,17 +105,17 @@
              placeholder="country"
              name="country" [(ngModel)]="country">
     </div>
-    
+
     <h4 class="ui top attached header" style="background-color: #D3D3D3">Contact Information</h4>
     <div class="ui attached segment">
-      
+
       <div class="three fields">
         <div class="field">
           <label for="user.phone">Phone</label>
           <input type="text"
                  id="phone"
                  placeholder="phone"
-                 name="phone" [(ngModel)]="currentUser.contactList[1].value">
+                 name="phone" [(ngModel)]="currentUser.contacts[1].value">
         </div>
         <div class="field">
           <label for="user.mobile">Mobile</label>
@@ -139,7 +139,7 @@
           <input type="text"
                  id="email2"
                  placeholder="email"
-                 name="email2" [(ngModel)]="currentUser.contactList[0].value">
+                 name="email2" [(ngModel)]="currentUser.contacts[0].value">
         </div>
         <div class="field">
           <label for="user.website">Website</label>
@@ -185,7 +185,7 @@
 
     <h4 class="ui top attached header" style="background-color: #D3D3D3">Listing Type</h4>
     <div class="ui attached segment">
-      
+
       <div class="three fields">
         <div class="inline field">
           <div class="ui checkbox">
@@ -330,7 +330,7 @@
 
     <h4 class="ui top attached header" style="background-color: #D3D3D3">Opening Hours</h4>
     <div class="ui attached segment">
-      
+
       <div class="two fields">
         <div class="field">
           <label for="user.twitter">Monday</label>
@@ -453,7 +453,7 @@
 
     <h4 class="ui top attached header" style="background-color: #D3D3D3">Additional Sections</h4>
     <div class="ui attached segment">
-      
+
       <div class="four fields">
         <div class="inline field">
           <div class="ui checkbox">
@@ -481,6 +481,328 @@
         </div>
       </div>
     </div>
+
+    <h4 class="ui top attached header" style="background-color: #D3D3D3">Appliance Repair</h4>
+    <div class="ui attached segment">
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Dishwashers</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Dryer Vents</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Dryers</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Garbage Disposals</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>General Major Appliances</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Ice Machines</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Microwave</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Ovens</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Ranges &amp; Cooktops</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Refrigerators / Freezers</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Trash Compactors</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Washing Machines</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Other</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-->
+
+    <h4 class="ui top attached header" style="background-color: #D3D3D3">Response Time</h4>
+    <div class="ui attached segment">
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Emergency Service</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>2 Hours Response</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>4 Hours Response</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Next Day</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>After Hours</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Weekend</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Holidays</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Other</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end-->
+    <h4 class="ui top attached header" style="background-color: #D3D3D3">Accepted Forms of Payment</h4>
+    <div class="ui attached segment">
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Apple Pay</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>AMEX</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>ATM/Debit</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Cash</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Check</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Diners Club</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Discover</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>JCB</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>MasterCard</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Paypal</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Samsung Pay</label>
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Visa</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="three fields">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" tabindex="0" class="hidden">
+            <label>Other</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--end-->
+
+
+    <h4 class="ui top attached header" style="background-color: #D3D3D3">Certifications</h4>
+    <div class="ui attached segment">
+      <h5 class="ui top attached header" style="background-color: #D3D3D3">Certification Details</h5>
+      <div class="ui attached segment">
+        <div class="three fields">
+        <div class="field">
+          <label for="user.twitter">Start Date</label>
+          <input type="text"
+                 id="twitter"
+                 placeholder="mm/dd/yyyy"
+                 name="twitter" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.twitter">Certification</label>
+          <input type="text"
+                 id="twitter"
+                 placeholder=""
+                 name="twitter" ngModel>
+        </div>
+        <div class="field">
+          <label for="user.twitter">Expiry Date</label>
+          <input type="text"
+                 id="twitter"
+                 placeholder="mm/dd/yyyy"
+                 name="twitter" ngModel>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+    <h4 class="ui top attached header" style="background-color: #D3D3D3">Industry Affiliation</h4>
+    <div class="ui attached segment">
+      <h5 class="ui top attached header" style="background-color: #D3D3D3">Industry Affiliation Details</h5>
+      <div class="ui attached segment">
+        <div class="three fields">
+        <div class="field">
+          <label for="user.twitter">Association Name</label>
+          <input type="text"
+                 id="twitter"
+                 placeholder=""
+                 name="twitter" ngModel>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <h4 class="ui top attached header" style="background-color: #D3D3D3">Tags</h4>
+    <div class="ui attached segment">
+        <div class="">
+        <div class="field">
+          <input type="text"
+                 id="twitter"
+                 placeholder="Add post tags with comma like: keyword1, keyword2, keyword3"
+                 name="twitter" ngModel>
+        </div>
+      </div>
+    </div>
+
+
+
 
     <br/>
     <div class="row" align="right">

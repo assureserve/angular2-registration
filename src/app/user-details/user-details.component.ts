@@ -20,13 +20,14 @@ export class UserDetailsComponent implements OnInit {
     console.log(localStorage.getItem('currentUser'));
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     console.log(this.currentUser);
-    this.address = this.currentUser.addressList[0].street1 + " " + this.currentUser.addressList[0].street2;
-    this.city = this.currentUser.addressList[0].city;
-    this.state = this.currentUser.addressList[0].state;
-    this.country = this.currentUser.addressList[0].country;
-    this.zipCode = this.currentUser.addressList[0].zipCode;
+    this.address = this.currentUser.addresses[0].street1 + " " + this.currentUser.addresses[0].street2;
+    this.city = this.currentUser.addresses[0].city;
+    this.state = this.currentUser.addresses[0].state;
+    this.country = this.currentUser.addresses[0].country;
+    this.zipCode = this.currentUser.addresses[0].zipCode;
 
-    //this.address = this.currentUser.addressList[0].street1 + " " + 
+    //this.address = this.currentUser.addresses[0].street1 + " " +
+console.log("****");
     this.utilService.addressEmitter.subscribe((addressMap: Map<string, string>) => {
       this.address = addressMap.get("address");
       this.city = addressMap.get("city");
@@ -36,7 +37,7 @@ export class UserDetailsComponent implements OnInit {
       //this.userLink.nativeElement.innerHTML = link;
     });
 
-    
+
   }
 
   ngOnInit() {
