@@ -1,6 +1,7 @@
 //import {Address} from "./address.model";
 import {Address} from "./address.model";
 import {Contact} from "./contact.model";
+import {WorkHour} from "./workhour.model";
 
 export class User {
   companyName: string;
@@ -17,5 +18,6 @@ export class User {
   //address: Address;
 
   addresses: Address[] = [];
-  contactList: Contact[] = [];
+  contacts: Contact[] = [];
+  workHours: WorkHour[] = [];
 }
